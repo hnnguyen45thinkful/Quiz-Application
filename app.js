@@ -48,6 +48,7 @@ $(document).ready(function(){
 		answers: ['Doctor Who', 'Star Trek', 'Babylon', 'Spooks'],
 		rightAnswer: 1,
 	}]
+	//Helps the questions move on and also to show the progress on the questions and numbers.
 		var updateCounter = function(){
 		$('.current-question-count').text(startQuestion + 1);
 		$('.correct-answer').text(playerScore.notCount);
@@ -58,13 +59,14 @@ $(document).ready(function(){
 		startQuestion++;
 		
 	}
+//Show the results and also hides the solution.	
 	function showSummary(){
 		$('.summary').show();
 		$('.question-counter-area').hide();
 		$('.correct-answer-counter').hide();
 		$('.correct').text(playerScore.notCount);
 	}
-	
+//Displaying the questions
 	function showQuestion(){
 		var questionObject = quiz_questions[startQuestion];
 		$('.correct-answer-counter').show();
@@ -82,15 +84,17 @@ $(document).ready(function(){
 			
 		}
 	}
-	function checkA(){
-		var ans = $('input[name="answer"]:checked').val();
-		if(quiz_questions[startQuestion].rightAnswer == ans){
+//
+	function checkAnswer(){
+		var answer = $('input[name="answer"]:checked').val();
+		if(quiz_questions[startQuestion].rightAnswer == answer){
 			playerScore.correctCount++;
 		} else {
 			playerScore.notCount++;
 
 		}
 	}
+	//Creating the functions and also helping the quiz function properly for the player/user.
 	$('.start-button').on('click', function(){
 		showQuestion();
 		$('.start-button').hide();
@@ -100,13 +104,14 @@ $(document).ready(function(){
 
 	$('.question-box').on('click', '#next-button', function(){
 		if ($('input[name="answer"]:checked').val()){ 
-			checkA();
+			checkAnswer();
 			nextQuestion();
 			showQuestion();
 		} else {
-			alert("Please choose an answer");
+			alert("Please try your best and pick the best answer!!!");
 		}			
 	})
+	//Creating the new test button with all the questions starting from the beginning and end.
 	function newTest(){
 		startQuestion = 0;
 		playerScore.correctCount = 0;
@@ -115,5 +120,5 @@ $(document).ready(function(){
 		$('.question-box').show();
 		$('.summary').hide();
 	}
-	$('.restart-test').click(newTest);
+	$('.restart-test').click(newTest);//Creating the reset button and starting over when the test is finish.
 })
