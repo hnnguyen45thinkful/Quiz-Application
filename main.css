@@ -1,0 +1,100 @@
+body {
+	margin: 0;
+	/*Here is the list of CSS Web Safe Font Combinations*/
+	/*http://www.w3schools.com/cssref/css_websafe_fonts.asp*/
+	font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+	font-variant: normal;
+	text-align: center;
+	font-size: 40px;
+	color: red;
+	font-family: "Times New Roman", Times, serif;
+}
+
+li {
+	list-style: none;
+}
+
+
+.body-background {
+	background-image:url("http://static.peabodyawards.com/user_images/the-simpsons-interview.jpg");
+	background-size: cover;
+}
+
+.start-button {
+	display: block;
+	margin: 0 auto;
+	margin-top: 150px;
+	width: 200px;
+	height: 100px;
+	background: white;
+	border: 5px solid black;
+	border-radius: 5px;
+	color: black;
+	font-size: 25px;
+}
+
+.start-button:hover {
+	background-color: yellow;
+	color: red;
+}
+/*Question n out of 10*/
+.question-counter-area {
+	font-size: 50px;
+	text-align:center;
+	margin-top: 50px;
+	color: black;
+	/* http://www.w3schools.com/cssref/pr_class_position.asp */
+	position: relative;
+	bottom: -80px;
+
+}
+
+.question-box, .summary {
+	background-color: white;
+	width: 450px;
+	height: 300px;
+	display: block;
+	margin: 0 auto;
+	margin-top:85px;
+	padding: 10px;
+	text-align: center;
+	font-size: 22px;
+	box-shadow: 0px 0px 10px 0px black;
+	border-radius: 5px;
+	border: 5px solid black;
+}
+
+#answer-choices {
+	text-align: left;
+}
+#next-button, .restart-test {
+	width: 70px;
+	height: 50px;
+	background-color: #ffcc00;
+	color: black;
+	border: 5px solid black;
+	border-radius: 5px;
+	font-size: 15px;
+}
+
+#next-button:hover {
+	background-color: red;
+}
+
+.correct-answer-counter {
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 75px;
+	color: black;
+	position: relative;
+	top: -50px;
+}
+
+.question-box, .summary, .question-counter-area, .correct-answer-counter  {
+	display: none;
+}
+
+

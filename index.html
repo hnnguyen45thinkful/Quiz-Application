@@ -1,0 +1,38 @@
+<!--Created by Hieu Nguyen-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>The Simpsons Trivia Quiz</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<body class="body-background">
+	<h1>Lets see if you Know The Simpsons Family!!!</h1>
+	<button class="start-button">Press this Button to the Start Test</button>
+	<!--List how many questions are there in the quiz and keep track how many are there.-->	
+	<section class="question-counter-area">
+	<p class="question-counter">Question <span class="current-question-count">N</span> out of <span class="number-of-questions">N</span></p>
+	</section>
+<!--A box of questions displaying all the questions I inputed on app.js javascript.-->
+
+	<section class="question-box">
+		<p class="question"></p>
+		<ul id="answer-choices"></ul>
+		<!--Create a button for going forward navigation on the quiz.-->
+		<button type="button" id="next-button">Next</button>
+	</section>
+	<!--Results for the Questions answered correct.-->
+	<section class="correct-answer-counter">
+	<p class="correct-answers"><span class="correct-answer">N</span> questions correct!</p>
+	</section>
+<!--Listing the summary to determine the results.-->
+	<section class="summary">
+		<p class="results">You had <span class="correct">n</span> questions right!</p>
+		<button class="restart-test">Restart Test</button>
+		</section>
+	<!--Using jquery javascript link-->	
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script type="text/javascript" src="app.js"></script> 
+</body>
+</html>
