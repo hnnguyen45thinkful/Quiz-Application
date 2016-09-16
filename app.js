@@ -86,6 +86,7 @@ $(document).ready(function(){
 	}
 //
 	function checkAnswer(){
+		//https://www.codecademy.com/en/forum_questions/52299222f10c600c330029ac
 		var answer = $('input[name="answer"]:checked').val();
 		if(quiz_questions[startQuestion].rightAnswer == answer){
 			playerScore.correctCount++;
