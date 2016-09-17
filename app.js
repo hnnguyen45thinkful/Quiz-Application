@@ -10,48 +10,48 @@ $(document).ready(function(){
 	var quiz_questions = [{
 		question: "What was Ned Flauders wife's name?",
 		answers: ['Ruth', 'Edna', 'Maude', 'Marge'],
-		rightAnswer: 3,
+		rightAnswer: 2,
 	}, {
 		question: "How much money does Bart sell his soul to Milhouse for?",
 		answers: ['$4', '$5', '$10', '$8'],
-		rightAnswer: 2,
+		rightAnswer: 1,
 	},{
 		question: "When Bart falls in Love with Jessica Lovejoy, she makes him pull the school fire alarm. Grounds Keeper runs back into the school for what?",
 		answers: ['The class hamster "Super Dude"', 'The Wee Turtles', 'Ralph Wiggum', 'His Bagpipes'],
-		rightAnswer: 2,
+		rightAnswer: 1,
 	},{
 		question: "Dr. Marvin Monroe's Family Therapy Center offers family bliss or what back?",
 		answers: ['Double money back', 'Get the hell out', 'No Refunds', 'Anger Medication'],
-		rightAnswer: 1,
+		rightAnswer: 0,
 	},{
 		question: "How do you spell Apu's last name?",
 		answers: ['Nahasapinepetilon', 'Nehasipinepetilon', 'Nahasipinipetiloin', 'Nahasapeemapetilon'],
-		rightAnswer: 4,
+		rightAnswer: 3,
 	},{
 		question: "What did Bart name his elephant ?",
 		answers: ['Squisher', 'Stampy', 'Stomper', 'Sticky'],
-		rightAnswer: 2,
+		rightAnswer: 1,
 	},{
 		question: "Who are Homer's best friends at work?",
 		answers: ['Laverne and Shirley', 'Lenny and Squiggy', 'Monte and Weylan', 'Lenny and Carl'],
-		rightAnswer: 4,
+		rightAnswer: 3,
 	},{
 		question: "What secret society did Homer join?",
 		answers: ['The Beerbellies', 'The Airheads', 'The Stonecutters', 'The Michael Jackson Fan Club'],
-		rightAnswer: 3,
+		rightAnswer: 2,
 	},{
 		question: "What's Patty and Selma's favourite TV show?",
 		answers: ['Futurama', 'Jeopardy', 'COPS', 'MacGuyver'],
-		rightAnswer: 4,
+		rightAnswer: 3,
 	}, {
 		question: "What TV marathon does Comic Book Guy say he is preparing for when he buys 100 tacos for $100?",
 		answers: ['Doctor Who', 'Star Trek', 'Babylon', 'Spooks'],
-		rightAnswer: 1,
-	}]
+		rightAnswer: 0,
+	}];
 	//Helps the questions move on and also to show the progress on the questions and numbers.
 		var updateCounter = function(){
 		$('.current-question-count').text(startQuestion + 1);
-		$('.correct-answer').text(playerScore.notCount);
+		$('.correct-answer').text(playerScore.correctCount);
 		$('.number-of-questions').text(quiz_questions.length);
 	}
 //Creating functions to help navigate questions throughout the quiz.
@@ -64,7 +64,7 @@ $(document).ready(function(){
 		$('.summary').show();
 		$('.question-counter-area').hide();
 		$('.correct-answer-counter').hide();
-		$('.correct').text(playerScore.notCount);
+		$('.correct').text(playerScore.correctCount);
 	}
 //Displaying the questions
 	function showQuestion(){
